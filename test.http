@@ -1,0 +1,22 @@
+@hostname = http://localhost
+@port = 8080
+@host = {{hostname}}:{{port}}
+
+GET {{host}}/books
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjYyNDUzMTJ9.JlQkvzTpKZsZgPKOiGyauDLuF4LFQPXVIL9R2ONFO3o
+###
+
+POST {{host}}/books
+Content-Type: application/json
+
+{
+    "id": "6",
+    "title": "The Godfather",
+    "author": "Mario Puzo"
+}
+###
+
+DELETE {{host}}/books/4
+###
+
+POST {{host}}/login
